@@ -1,0 +1,1060 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gemeinschaftspraxis W – Ihre Hausarztpraxis mit Herz und Kompetenz</title>
+<meta name="description" content="Gemeinschaftspraxis W – Ihre Hausarztpraxis für Vorsorge, Behandlung und persönliche Betreuung." />
+<style>
+:root{
+--sky-50: #f0f9ff;
+--sky-100: #e6f6ff;
+--sky-600: #0284c7;
+--sky-700: #026aa0;
+--text: #0f172a;
+--muted: #475569;
+--card: #ffffff;
+--radius: 14px;
+--container: 1100px;
+}
+*{box-sizing:border-box;}
+body{font-family:Inter, sans-serif; margin:0; color:var(--text); background:linear-gradient(180deg,var(--sky-50),#ffffff);}
+.container{max-width:var(--container);margin:0 auto;padding:28px;}
+
+/* HEADER */
+header { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px; padding: 30px 0 10px 0; margin-bottom: 20px; }
+.brand { grid-column: 1 / -1; display: flex; flex-direction: row; align-items: center; text-align: left; gap: 20px; margin-bottom: 24px; justify-content: center; }
+.brand img{border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  filter: brightness(1.2) contrast(1.1);
+  box-shadow: 0 0 80px rgba(0, 120, 215, 0.3);
+}
+
+/* Desktop Logo */
+.brand .logo-mobile {
+  display: none;
+}
+
+.brand .logo-desktop {
+  display: block;
+}
+
+.brand h1{margin:0;font-size:40px;color: #003366;} 
+.brand p.lead{margin:0;color:var(--muted);font-size:18px;}
+
+/* NAVIGATION - volle Breite */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0f4ff;
+  padding: 15px 0;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.nav-bar-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.nav-bar a:hover {
+  color: var(--sky-600);
+  background-color: rgba(2, 132, 199, 0.1);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 1000;
+  border-radius: 8px;
+  padding: 8px 0;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+}
+
+.dropdown-content a {
+  color: var(--text);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.2s ease;
+  border-radius: 0;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(2, 132, 199, 0.1);
+  color: var(--sky-600);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn {
+  background-color: var(--sky-600);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: var(--sky-700);
+  color: white !important;
+}
+
+h2{color:var(--sky-600);margin-top:0;margin-bottom:0;}
+.hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:0;}
+.hero h2{margin-top:0;margin-bottom:12px;}
+.hero p{color:var(--muted);line-height:1.6;margin-top:0;margin-bottom:0;}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 22px rgba(2,132,199,0.06);padding:18px;border:1px solid #eef6fb;margin-top:4px;display:flex;flex-direction:column;}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:18px;}
+.service h3{margin:0 0 6px;font-size:16px;}
+.service p{margin:0;color:var(--muted);font-size:14px;}
+
+/* Kontakt-Section - Desktop 2 Spalten */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;align-items:stretch;}
+.contact-grid > * { display:flex; flex-direction:column; height:100%; }
+.contact-grid .card > div:last-child { flex:1; min-height:0; }
+.contact-headers{display:grid; grid-template-columns:1fr 1fr; gap:18px; align-items:start; margin-bottom:0;}
+.contact-headers h2{margin:0; font-size:1.5rem;}
+.contact-headers h2:nth-child(2){justify-self:start;}
+.contact-item{display:contents;}
+.rezept-btn { display:flex;align-items:center;justify-content:center; width:100%; color:white; border-radius:10px; text-decoration:none; font-weight:600; background:var(--sky-600); border:2px solid var(--sky-600); flex:1; transition:all 0.2s ease; margin-bottom:10px; padding:12px 0; }
+.rezept-btn:hover { background:var(--sky-700); }
+.cookie-banner { position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--card);border:1px solid #dbeafe;box-shadow:0 4px 18px rgba(2,132,199,0.1);padding:18px;border-radius:12px;display:none;max-width:480px;z-index:9999;font-size:14px;}
+.cookie-banner button { background:var(--sky-600);color:white;border:none;padding:8px 16px;border-radius:8px;font-weight:600;margin-top:10px;cursor:pointer;}
+.close-modal { position:absolute; top:12px; right:12px; border:none; background:none; font-size:20px; cursor:pointer; }
+small.note{color:var(--muted);}
+
+/* Leistungen Sections Styling */
+.leistung-section {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 22px rgba(2,132,199,0.06);
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid #eef6fb;
+}
+
+.leistung-section h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e0f4ff;
+}
+
+.leistung-section h3 {
+  color: var(--sky-600);
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.leistung-section ul {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+
+.leistung-section li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.leistung-section p {
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.intro {
+  margin-bottom: 32px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 22px rgba(2,132,199,0.06);
+  padding: 24px;
+  border: 1px solid #eef6fb;
+}
+
+.intro h1 {
+  color: var(--sky-600);
+  margin-bottom: 16px;
+  margin-top: 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e0f4ff;
+}
+
+.intro p {
+  color: var(--muted);
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+footer{margin-top:28px;padding:18px 0;border-top:1px solid #eef6fb;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+footer a{margin-left:12px;color:var(--text);text-decoration:none;}
+.social-icons{display:flex;gap:12px;align-items:center;}
+.social-icons a{margin-left:0;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:var(--sky-100);transition:all 0.3s ease;}
+.social-icons a:hover{background:var(--sky-600);transform:scale(1.1);}
+.social-icons a svg{width:18px;height:18px;fill:var(--sky-600);transition:fill 0.3s ease;}
+.social-icons a:hover svg{fill:white;}
+.overlay { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.4); align-items:center; justify-content:center; z-index:10000; }
+.overlay-content { background:white; border-radius:12px; padding:24px; max-width:480px; width:90%; box-shadow:0 6px 22px rgba(0,0,0,0.25); text-align:center; position:relative; }
+.overlay-content textarea { width:100%; height:90px; border:1px solid #cbd5e1; border-radius:8px; padding:10px; font-size:15px; margin-bottom:18px; resize:none; }
+.overlay-content p { margin-bottom:12px; color:#475569; line-height:1.5; }
+.overlay-content button { background-color:#0ea5e9; color:white; border:none; border-radius:8px; padding:10px 22px; cursor:pointer; font-weight:600; }
+.overlay-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.overlay-grid a { padding:18px; background:#e0f2fe; border-radius:10px; text-decoration:none; color:#0369a1; font-weight:600; display:flex; align-items:center; justify-content:center; }
+
+.hero .card h3 { margin-top:4px!important; }
+.hero .card p:first-of-type { margin-top:8px!important; }
+footer {
+  margin-top: 28px;
+  padding: 18px 0;
+  border-top: 1px solid #eef6fb;
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--sky-100);
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: var(--sky-600);
+  transform: scale(1.1);
+}
+
+.social-icons a svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--sky-600);
+  transition: fill 0.3s ease;
+}
+
+.social-icons a:hover svg {
+  fill: white;
+}
+
+.legal-links a {
+  margin-left: 12px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    font-size: 12px;
+  }
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+
+/* Mobile Optimierung */
+@media (max-width:900px){
+  .container{padding:16px;}
+  
+  /* Header Mobile */
+  header{padding:16px 0 8px 0;margin-bottom:12px;}
+  .brand{flex-direction:column;text-align:center;gap:20px;margin-bottom:16px;}
+  .brand img{height:25px;}
+  .brand h1{font-size:34px;}
+  .brand p.lead{font-size:15px;}
+
+  /* Mobile Logo Umschaltung */
+  .brand .logo-desktop {
+    display: none;
+  }
+  
+  .brand .logo-mobile {
+    display: block;
+  }
+
+  /* Logo brillanter & intensiver */
+  .brand img {
+    height: 95px; /* leicht größer für mobile Darstellung */
+    width: 95px;
+    filter: brightness(1.15) contrast(1.15) saturate(1.3);
+    transition: filter 0.3s ease;
+  }
+
+  /* Optional: dezente Hervorhebung bei Touch/Interaktion */
+  .brand img:active {
+    filter: brightness(1.25) contrast(1.2) saturate(1.5);
+  }
+
+  
+  /* Navigation Mobile */
+  .nav-bar-inner{padding:0 16px;flex-direction:column;gap:12px;}
+  .nav-links{flex-direction:column;gap:8px;width:100%;align-items:stretch;}
+  .nav-bar a{text-align:center;padding:10px 12px;}
+  .dropdown{width:100%;}
+  .dropdown > a{width:100%;display:block;}
+  .dropdown-content{position:static;width:100%;box-shadow:none;padding:0;margin-top:0;background:rgba(2,132,199,0.05);}
+  .dropdown-content a{padding:10px 20px;}
+  .btn{width:100%;}
+  
+  /* Hero Mobile */
+  .hero{grid-template-columns:1fr;gap:20px;margin-top:8px;}
+  .hero h2{font-size:24px;line-height:1.3;}
+  .hero p{font-size:15px;}
+  .hero aside{order:-1;}
+  
+  /* Sprechzeiten Card Mobile */
+  .hero .card h3{font-size:14px;}
+  .hero .card > div{font-size:13px;}
+  .hero .card > div > div{padding:6px 8px;}
+  .hero .card > div span:last-child{font-size:12px;}
+  
+  /* Services Mobile */
+  .services{grid-template-columns:1fr;gap:12px;}
+  .service h3{font-size:17px;}
+  .service p{font-size:14px;}
+ /* Leistungen Sections Mobile */
+   .leistung-section {
+     padding: 18px;
+     margin-bottom: 16px;
+   }
+   
+   .leistung-section h2 {
+     font-size: 22px;
+   }
+   
+   .leistung-section h3 {
+     font-size: 16px;
+   }
+   
+   .intro h1 {
+     font-size: 26px;
+   }
+   
+   .intro p {
+     font-size: 15px;
+   }
+  
+  /* Kontakt Mobile - WICHTIG: Jede Überschrift direkt über ihrem Inhalt */
+  .contact-headers{
+    display:none; /* Überschriften werden im Mobile-Layout anders platziert */
+  }
+  
+  .contact-item{
+    display:block;
+  }
+  
+  /* Überschrift vor jedem Card einfügen */
+  .contact-item:first-child::before{
+    content:"Kontakt & Lage";
+    display:block;
+    color:var(--sky-600);
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:14px;
+  }
+  
+  .contact-item:last-child::before{
+    content:"Online-Rezeption";
+    display:block;
+    color:var(--sky-600);
+    font-size:22px;
+    font-weight:bold;
+    margin-bottom:14px;
+  }
+  
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:32px;
+  }
+  
+  /* Online-Rezeption kommt zuerst */
+  .contact-item:first-child{order:2;}
+  .contact-item:last-child{order:1;}
+  
+  .contact-grid .card{padding:16px;}
+  .contact-grid .card p{font-size:14px;}
+  .contact-grid iframe{min-height:280px!important;}
+  
+  /* Leistungen zentrieren */
+  .service{text-align:center;}
+  
+  /* Buttons Mobile */
+  .rezept-btn{padding:14px 0;font-size:15px;}
+  
+  /* Overlay Mobile */
+  .overlay-content{padding:20px;max-width:95%;}
+  .overlay-content h3{font-size:20px;margin-bottom:12px;}
+  .overlay-content p{font-size:14px;}
+  .overlay-content textarea{height:100px;font-size:14px;}
+  .overlay-grid{grid-template-columns:1fr;gap:10px;}
+  .overlay-grid a{padding:14px;font-size:14px;}
+  
+   /* Footer Mobile */
+  footer{flex-direction:column;gap:12px;text-align:center;font-size:12px;}
+  footer > div:last-child{flex-direction:column;gap:12px;}
+  footer > div:last-child > div{display:flex;flex-direction:column;gap:8px;}
+  footer a{margin-left:0;}
+  
+  /* Cookie Banner Mobile */
+  .cookie-banner{bottom:10px;left:10px;right:10px;transform:none;max-width:none;font-size:13px;}
+}
+
+@media (max-width:500px){
+  .brand h1{font-size:24px;}
+  .brand p.lead{font-size:14px;}
+  .hero h2{font-size:20px;}
+  .contact-headers h2{font-size:20px;}
+}
+	.mobile-line-break {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-line-break {
+    display: block;
+    height: 0;
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Brand außerhalb der Navigation -->
+<div class="container">
+  <header>
+    <div class="brand">
+      <img src="images/logopc.png" alt="Praxis W Logo" class="logo-desktop" />
+      <img src="images/logo.png" alt="Praxis W Logo" class="logo-mobile" />
+      <div>
+        <h1>Gemeinschaftspraxis W</h1>
+        <p class="lead"> 
+  Hausärztliche Gemeinschaftspraxis –
+  <span class="mobile-break">mit Herz und Kompetenz</span>
+</p>
+
+<style>
+/* Desktop: alles in einer Zeile */
+.lead .mobile-break {
+  display: inline;
+}
+
+/* Mobile: Text unterhalb – Abstand stark reduziert */
+@media (max-width: 767px) {
+  .lead .mobile-break {
+    display: block;
+    margin-top: 0.05rem; /* Minimaler Abstand */
+    line-height: 1.1;    /* Kompaktere Zeilenhöhe */
+  }
+}
+</style>
+      </div>
+    </div>
+  </header>
+</div>
+
+
+<!-- Navigation mit voller Breite -->
+<nav class="nav-bar">
+  <div class="nav-bar-inner">
+    <div class="nav-links">
+      <a href="index.html">Startseite</a>
+      <a href="index.html#contact">Online-Rezeption</a>
+      <a href="team.html">Team</a>
+      <div class="dropdown">
+        <a href="leistungen.html">Leistungen</a>
+        <div class="dropdown-content">
+          <a href="leistungen.html#hausarztprogramm">Hausarztprogramm / HzV</a>
+          <a href="leistungen.html#prävention">Prävention</a>
+          <a href="leistungen.html#diagnostik">Diagnostik</a>
+          <a href="leistungen.html#vorsorge">Vorsorgeuntersuchungen</a>
+          <a href="leistungen.html#impfungen">Impfungen</a>
+          <a href="leistungen.html#reisemedizin">Reisemedizin</a>
+          <a href="leistungen.html#dmp">DMP</a>
+          <a href="leistungen.html#wundversorgung">Wundversorgung</a>
+          <a href="leistungen.html#videosprechstunde">Videosprechstunde</a>
+          <a href="leistungen.html#hausbesuche">Hausbesuche</a>
+	  <a href="https://praxisw.base44.app/" target="_blank" rel="noopener noreferrer">Praxis-App</a>
+        </div>
+      </div>
+         <a href="leistungen.html#videosprechstunde">Videosprechstunde</a>
+      <a href="index.html#contact">Kontakt</a>
+    </div>
+    <a href="https://www.doctolib.de/allgemeinmedizin/bornheim/tristan-wetzel" target="_blank" rel="noopener" class="btn btn-container">Termin vereinbaren</a>
+  </div>
+</nav>
+
+<!-- Content -->
+<div class="container">
+
+  <div class="intro">
+    <h1>Unsere Leistungen</h1>
+    <p>Umfassende medizinische Versorgung – von der Prävention bis zur Behandlung</p>
+  </div>
+
+  <!-- Hausarztprogramm -->
+  <section id="hausarztprogramm" class="leistung-section">
+    <h2>Hausarztprogramm / HzV</h2>
+    <p>Das Hausarztprogramm (Hausarztzentrierte Versorgung – HzV) ist ein besonderes Versorgungskonzept, das eine engere Zusammenarbeit zwischen Hausarzt und Patient ermöglicht.</p>
+    <h3>Vorteile des Hausarztprogramms:</h3>
+    <ul>
+      <li>Der große Gesundheits-Check-up 35 kann jetzt <b>exklusiv schon alle zwei statt wie bisher alle drei Jahre</b> in Anspruch genommen werden</li>
+	  <li>Ihr Hausarzt als zentrale Anlaufstelle für alle medizinischen Fragen</li>
+      <li>Bessere Koordination bei Facharztüberweisungen</li>
+      <li>Längere Sprechzeiten und mehr Zeit für Ihre Anliegen</li>
+      <li>Kontinuierliche Betreuung und optimale Behandlungsplanung</li>
+      <li>Zusätzliche Vorsorge- und Präventionsangebote</li>
+    </ul>
+    <p>Die Teilnahme am Hausarztprogramm ist freiwillig und <b>kostenlos</b>. Sprechen Sie uns gerne an, wenn Sie mehr darüber erfahren möchten.</p>
+  </section>
+
+<!-- Prävention -->
+  <section id="prävention" class="leistung-section">
+    <h2>Prävention</h2>
+    <p>Gesundheit lässt sich nicht nur behandeln –<span class="mobile-line-break"> </span> sie lässt sich vor allem schützen.<span class="mobile-line-break"> </span> Viele Erkrankungen entwickeln sich langsam und bleiben lange unbemerkt, obwohl sie bereits messbare Spuren im Körper hinterlassen. Moderne Präventionsmedizin setzt genau hier an: Sie erkennt Risiken früh, bevor Beschwerden entstehen, und ermöglicht rechtzeitige Schritte für ein gesundes, aktives Leben. Durch gezielte Untersuchungen, Ultraschalldiagnostik und sinnvolle Laboranalysen lassen sich Probleme oft im Ansatz erkennen und langfristige Komplikationen vermeiden</p>
+    
+    <h3>Präventionspakete</h3>
+    
+    <div style="margin-top: 20px; padding: 16px; background-color: var(--sky-50); border-radius: 8px; border-left: 4px solid var(--sky-600);">
+      <h4 style="color: var(--sky-700); margin-top: 0; margin-bottom: 8px;">1. Schilddrüsen-Präventionspaket</h4>
+      <p style="margin-bottom: 8px;"><strong>Leistungen (im Gesamtpreis enthalten):</strong></p>
+      <ul style="margin-top: 8px;">
+        <li>Ärztliches Beratungsgespräch</li>
+        <li>Körperliche Untersuchung</li>
+        <li>Schilddrüsen-Ultraschall (Beurteilung von Größe, Struktur, Knoten, Durchblutung)</li>
+        <li>Laboruntersuchungen: TSH, fT3, fT4, Anti-TPO, Anti-TG</li>
+        <li>Individueller Befundbericht und Therapieempfehlungen</li>
+      </ul>
+      <p style="margin-top: 12px; margin-bottom: 0;"><strong style="color: var(--sky-600);">Gesamtkosten: 120 €</strong></p>
+    </div>
+
+    <div style="margin-top: 16px; padding: 16px; background-color: var(--sky-50); border-radius: 8px; border-left: 4px solid var(--sky-600);">
+      <h4 style="color: var(--sky-700); margin-top: 0; margin-bottom: 8px;">2. Abdomen-Präventionspaket (mit iFOBT)</h4>
+      <p style="margin-bottom: 8px;"><strong>Leistungen (im Gesamtpreis enthalten):</strong></p>
+      <ul style="margin-top: 8px;">
+        <li>Anamnese und körperliche Untersuchung</li>
+        <li>Kompletter Abdomen-Ultraschall (Leber, Gallenblase, Gallenwege, Pankreas, Nieren, Nebennieren, Milz, Aorta)</li>
+        <li>iFOBT – immunologischer Stuhltest auf okkultes Blut</li>
+        <li>Schriftlicher Befundbericht</li>
+      </ul>
+      <p style="margin-top: 12px; margin-bottom: 0;"><strong style="color: var(--sky-600);">Gesamtkosten: 150 €</strong></p>
+    </div>
+
+    <div style="margin-top: 16px; padding: 16px; background-color: var(--sky-50); border-radius: 8px; border-left: 4px solid var(--sky-600);">
+      <h4 style="color: var(--sky-700); margin-top: 0; margin-bottom: 8px;">3. Müdigkeits-Check (Fatigue-Paket)</h4>
+      <p style="margin-bottom: 8px;"><strong>Leistungen (im Gesamtpreis enthalten):</strong></p>
+      <ul style="margin-top: 8px;">
+        <li>Ausführliche Fatigue-Anamnese</li>
+        <li>Körperliche Untersuchung</li>
+        <li>Schilddrüsen-Ultraschall</li>
+        <li>Laborprofil:
+          <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li>Blutbild</li>
+            <li>Ferritin</li>
+            <li>CRP</li>
+            <li>TSH, fT3, fT4</li>
+            <li>Vitamin D</li>
+            <li>Vitamin B12</li>
+            <li>Glukose & HbA1c</li>
+          </ul>
+        </li>
+        <li>Persönlicher Maßnahmenplan (Schlaf, Stress, Ernährung)</li>
+      </ul>
+      <p style="margin-top: 12px; margin-bottom: 0;"><strong style="color: var(--sky-600);">Gesamtkosten: 170 €</strong></p>
+    </div>
+
+    <div style="margin-top: 16px; padding: 16px; background-color: var(--sky-50); border-radius: 8px; border-left: 4px solid var(--sky-600);">
+      <h4 style="color: var(--sky-700); margin-top: 0; margin-bottom: 8px;">4. Großes Blutbild & Erweiterte Laboranalyse</h4>
+      <p style="margin-bottom: 8px;"><strong>Leistungen (im Gesamtpreis enthalten):</strong> Umfassende Laboruntersuchung mit breitem diagnostischem Spektrum:</p>
+      <ul style="margin-top: 8px;">
+        <li><strong>Blutbild & Entzündung</strong>
+          <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li>Großes Blutbild</li>
+            <li>CRP</li>
+            <li>BSG</li>
+          </ul>
+        </li>
+        <li><strong>Stoffwechsel & Organe</strong>
+          <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li>Leberwerte (GOT, GPT, GGT, Bilirubin)</li>
+            <li>Nierenwerte (Kreatinin, Harnstoff, eGFR)</li>
+            <li>Elektrolyte (Natrium, Kalium, Calcium, Magnesium)</li>
+            <li>Blutzucker, HbA1c</li>
+            <li>LDH</li>
+            <li>Harnsäure</li>
+          </ul>
+        </li>
+        <li><strong>Fettstoffwechsel</strong>
+          <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li>Gesamtcholesterin</li>
+            <li>HDL, LDL</li>
+            <li>Triglyceride</li>
+            <li>ApoB</li>
+            <li>HOMA-Index</li>
+            <li>Insulin-Resistenz</li>
+          </ul>
+        </li>
+        <li><strong>Hormone & Schilddrüse</strong>
+          <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li>TSH, fT3, fT4</li>
+            <li>Cortisol</li>
+          </ul>
+        </li>
+        <li><strong>Vitamine & Spurenelemente</strong>
+          <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li>Vitamin B12</li>
+            <li>Folsäure</li>
+            <li>Vitamin D3</li>
+            <li>Eisen, Ferritin</li>
+            <li>Zink</li>
+            <li>Selen</li>
+          </ul>
+        </li>
+      </ul>
+      <p style="margin-top: 12px; margin-bottom: 0;"><strong style="color: var(--sky-600);">Gesamtkosten: 160 €</strong></p>
+    </div>
+
+    <div style="margin-top: 16px; padding: 16px; background-color: var(--sky-50); border-radius: 8px; border-left: 4px solid var(--sky-600);">
+      <h4 style="color: var(--sky-700); margin-top: 0; margin-bottom: 8px;">5. Herz-Check Basis (erweitert)</h4>
+      <p style="margin-bottom: 8px;"><strong>Leistungen (im Gesamtpreis enthalten):</strong></p>
+      <ul style="margin-top: 8px;">
+        <li>Herz-Kreislauf-Anamnese</li>
+        <li>Körperliche Untersuchung</li>
+        <li>Ruhe-EKG</li>
+        <li>Herz-Ultraschall (Basis-Echokardiografie)</li>
+        <li>Carotis-Doppler (Gefäß-Ultraschall der Halsgefäße)</li>
+        <li>Laborwerte für das Herz:
+          <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li>Lipidprofil (Gesamtcholesterin, HDL, LDL, Triglyceride)</li>
+            <li>hs-CRP</li>
+            <li>NT-proBNP</li>
+            <li>Glukose</li>
+            <li>HbA1c</li>
+          </ul>
+        </li>
+        <li>Blutdruckprofil</li>
+        <li>Schriftlicher Befundbericht</li>
+      </ul>
+      <p style="margin-top: 12px; margin-bottom: 0;"><strong style="color: var(--sky-600);">Gesamtkosten: 240 €</strong></p>
+    </div>
+
+    <div style="margin-top: 16px; padding: 16px; background-color: var(--sky-50); border-radius: 8px; border-left: 4px solid var(--sky-600);">
+      <h4 style="color: var(--sky-700); margin-top: 0; margin-bottom: 8px;">6. Longevity-Check (Ganzkörper-Vorsorge, erweitert)</h4>
+      <p style="margin-bottom: 8px;"><strong>Leistungen (im Gesamtpreis enthalten):</strong></p>
+      <ul style="margin-top: 8px;">
+        <li>Detaillierte Lifestyle-, Schlaf- & Ernährungsanamnese</li>
+        <li>Ganzkörper-Kurzuntersuchung</li>
+        <li>Schilddrüsen-Ultraschall</li>
+        <li>Abdomen-Ultraschall</li>
+        <li>Herz-Ultraschall (Basis)</li>
+        <li>Carotis-Doppler</li>
+        <li>Körperzusammensetzungsanalyse (BIA)</li>
+        <li>Erweitertes Laborprofil:
+          <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li>Lipidprofil & ApoB</li>
+            <li>hs-CRP</li>
+            <li>Insulin & HOMA-IR</li>
+            <li>Hormonstatus (Testosteron/Estradiol, DHEA-S, Cortisol)</li>
+            <li>Vitamin- & Mineralstatus (Vitamin D, B12, Folat, Magnesium, Zink, Selen)</li>
+          </ul>
+        </li>
+        <li>Individueller Longevity-Plan</li>
+      </ul>
+      <p style="margin-top: 12px; margin-bottom: 0;"><strong style="color: var(--sky-600);">Gesamtkosten: 430 €</strong></p>
+    </div>
+
+    <div style="margin-top: 16px; padding: 16px; background-color: var(--sky-50); border-radius: 8px; border-left: 4px solid var(--sky-600);">
+      <h4 style="color: var(--sky-700); margin-top: 0; margin-bottom: 8px;">7. Unverträglichkeits-Check</h4>
+      <p style="margin-bottom: 8px;"><strong>Leistungen (im Gesamtpreis enthalten):</strong></p>
+      <ul style="margin-top: 8px;">
+        <li>Ernährungs- und Symptom-Anamnese</li>
+        <li>Abdomen-Ultraschall</li>
+        <li>Laboruntersuchungen zu Lebensmittelintoleranzen:
+          <ul style="margin-top: 6px; margin-bottom: 6px;">
+            <li>Laktoseintoleranz (H2-Test oder genetisch)</li>
+            <li>Fruktoseintoleranz (H2-Test)</li>
+            <li>Zöliakie-Antikörper (tTG-IgA + Gesamt-IgA)</li>
+            <li>DAO (zur Einschätzung einer Histaminintoleranz)</li>
+            <li>Basis-Entzündungsmarker</li>
+          </ul>
+        </li>
+        <li>Auswertung & individuelle Ernährungsempfehlungen</li>
+      </ul>
+      <p style="margin-top: 12px; margin-bottom: 0;"><strong style="color: var(--sky-600);">Gesamtkosten: 220 €</strong></p>
+    </div>
+
+    <p style="margin-top: 24px; padding: 16px; background-color: var(--sky-50); border-radius: 8px; border-left: 4px solid var(--sky-600);">
+      <strong>Hinweis:</strong> Alle Präventionspakete sind Selbstzahlerleistungen (IGeL). Sprechen Sie uns gerne an – wir beraten Sie ausführlich, welches Paket für Ihre individuelle Situation am besten geeignet ist.
+    </p>
+</section>
+
+  <!-- Diagnostik -->
+  <section id="diagnostik" class="leistung-section">
+    <h2>Diagnostik</h2>
+    <p>Moderne diagnostische Verfahren sind die Grundlage einer gezielten Behandlung. In unserer Praxis bieten wir Ihnen umfassende Diagnostikmöglichkeiten:</p>
+    <h3>Unsere diagnostischen Leistungen:</h3>
+    <ul>
+      <li><strong>Laboruntersuchungen:</strong> Blutbild, Blutzucker, Cholesterin, Schilddrüsenwerte und vieles mehr</li>
+      <li><strong>EKG (Elektrokardiogramm):</strong> Untersuchung der Herzfunktion</li>
+      <li><strong>Belastungs-EKG:</strong> Herzfunktion unter körperlicher Belastung</li>
+      <li><strong>Lungenfunktionstest:</strong> Überprüfung der Atemfunktion</li>
+      <li><strong>Ultraschalluntersuchungen:</strong> Bauchorgane, Schilddrüse</li>
+      <li><strong>Langzeit-Blutdruckmessung:</strong> 24-Stunden-Überwachung</li>
+      <li><strong>Schnelltests:</strong> Streptokokken, Influenza, COVID-19</li>
+    </ul>
+    <p>Alle Untersuchungen werden von erfahrenem Fachpersonal durchgeführt und ausgewertet.</p>
+  </section>
+  <!-- Vorsorgeuntersuchungen -->
+  <section id="vorsorge" class="leistung-section">
+    <h2>Vorsorgeuntersuchungen</h2>
+    <p>Vorsorge ist besser als Nachsorge. Nutzen Sie unsere umfassenden Vorsorgeuntersuchungen zur Früherkennung von Erkrankungen.</p>
+    <h3>Unsere Vorsorgeangebote:</h3>
+    <ul>
+      <li><strong>Check-up 35:</strong> Gesundheitsuntersuchung ab 35 Jahren (alle 3 Jahre)</li>
+      <li><strong>Krebsvorsorge:</strong> Hautkrebs-Screening, Darmkrebs-Vorsorge</li>
+      <li><strong>Gesundheitsuntersuchung:</strong> Herz-Kreislauf, Stoffwechsel, Nierenfunktion</li>
+      <li><strong>Individuelle Gesundheitsleistungen (IGeL):</strong> Zusätzliche Vorsorgeuntersuchungen auf Wunsch</li>
+    </ul>
+    <p>Sprechen Sie uns an – wir beraten Sie gerne über die für Sie sinnvollen Vorsorgemaßnahmen.</p>
+  </section>
+  <!-- Impfungen -->
+  <section id="impfungen" class="leistung-section">
+    <h2>Impfungen</h2>
+    <p>Impfungen gehören zu den wichtigsten und wirksamsten präventiven Maßnahmen in der Medizin. Wir bieten Ihnen alle empfohlenen Schutzimpfungen an.</p>
+    <h3>Standardimpfungen:</h3>
+    <ul>
+      <li>Tetanus, Diphtherie, Keuchhusten (Td/Tdap)</li>
+      <li>Masern, Mumps, Röteln (MMR)</li>
+      <li>Grippe (Influenza) – jährlich empfohlen</li>
+      <li>COVID-19</li>
+      <li>Pneumokokken (Lungenentzündung)</li>
+      <li>Gürtelrose (Herpes Zoster)</li>
+      <li>FSME (Zeckenimpfung)</li>
+      <li>HPV (Humane Papillomviren)</li>
+    </ul>
+    <p>Wir überprüfen gerne Ihren Impfstatus und erstellen einen individuellen Impfplan für Sie und Ihre Familie.</p>
+  </section>
+  <!-- Reisemedizin -->
+  <section id="reisemedizin" class="leistung-section">
+    <h2>Reisemedizin (Selbstzahler)</h2>
+    <p>Planen Sie eine Reise ins Ausland? Wir beraten Sie umfassend zu allen gesundheitlichen Aspekten Ihrer Reise.</p>
+    <h3>Unsere reisemedizinischen Leistungen:</h3>
+    <ul>
+      <li><strong>Reisemedizinische Beratung:</strong> Individuelle Empfehlungen je nach Reiseziel</li>
+      <li><strong>Reiseimpfungen:</strong> Hepatitis A/B, Typhus, Gelbfieber, Tollwut, Japanische Enzephalitis u.v.m.</li>
+      <li><strong>Malaria-Prophylaxe:</strong> Beratung und Rezept</li>
+      <li><strong>Reiseapotheke:</strong> Zusammenstellung wichtiger Medikamente</li>
+      <li><strong>Atteste und Bescheinigungen:</strong> Für Medikamente, Spritzen (Diabetes) etc.</li>
+    </ul>
+    <p>Planen Sie Ihren Termin rechtzeitig – idealerweise 6-8 Wochen vor Reiseantritt.</p>
+  </section>
+  <!-- DMP -->
+  <section id="dmp" class="leistung-section">
+    <h2>Disease-Management-Programme (DMP)</h2>
+    <p>Disease-Management-Programme sind strukturierte Behandlungsprogramme für chronisch kranke Patienten. Wir bieten DMP-Programme für folgende Erkrankungen an:</p>
+    <h3>Unsere DMP-Programme:</h3>
+    <ul>
+      <li><strong>Diabetes mellitus Typ 1 und Typ 2:</strong> Regelmäßige Kontrollen, Schulungen, Behandlungsoptimierung</li>
+      <li><strong>Koronare Herzkrankheit (KHK):</strong> Herzkreislauf-Überwachung und Therapie</li>
+      <li><strong>Asthma und COPD:</strong> Lungenfunktionskontrollen, Medikamentenanpassung</li>
+      <li><strong>Bluthochdruck:</strong> Regelmäßige Blutdruckkontrollen und Einstellung</li>
+    </ul>
+    <h3>Vorteile der DMP-Teilnahme:</h3>
+    <ul>
+      <li>Engmaschige Betreuung und regelmäßige Kontrollen</li>
+      <li>Strukturierte Dokumentation Ihrer Werte</li>
+      <li>Patientenschulungen zur besseren Krankheitsbewältigung</li>
+      <li>Vermeidung von Folgeerkrankungen</li>
+    </ul>
+  </section>
+  <!-- Wundversorgung -->
+  <section id="wundversorgung" class="leistung-section">
+    <h2>Wundversorgung</h2>
+    <p>Eine fachgerechte Wundversorgung ist entscheidend für eine schnelle und komplikationsfreie Heilung.</p>
+    <h3>Unsere Leistungen:</h3>
+    <ul>
+      <li><strong>Akute Wundversorgung:</strong> Reinigung, Desinfektion, Versorgung von Schnittwunden, Schürfwunden</li>
+      <li><strong>Chronische Wunden:</strong> Behandlung von schlecht heilenden Wunden (z.B. bei Diabetes)</li>
+      <li><strong>Verbandswechsel:</strong> Regelmäßige Kontrolle und professioneller Verbandswechsel</li>
+      <li><strong>Nahtentfernung:</strong> Nach Operationen oder Verletzungen</li>
+    </ul>
+    <p>Bei allen Wunden ist eine zeitnahe Behandlung wichtig. Zögern Sie nicht, uns zu kontaktieren.</p>
+  </section>
+
+ <!-- Videosprechstunde -->
+<section id="videosprechstunde" class="leistung-section">
+  <style>
+    #videosprechstunde {
+      padding-top: 10px;
+      padding-bottom: -12px;
+    }
+    
+    .video-icon {
+      width: 38px;
+      height: 38px;
+      transform: translateY(2px);
+      transition: transform 0.25s ease, filter 0.25s ease;
+      filter: drop-shadow(0 0 3px rgba(14, 165, 233, 0.4));
+      touch-action: manipulation;
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse-glow {
+      0%, 100% {
+        filter: drop-shadow(0 0 3px rgba(14, 165, 233, 0.4));
+        transform: translateY(2px) scale(1);
+      }
+      50% {
+        filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.7));
+        transform: translateY(2px) scale(1.05);
+      }
+    }
+    
+    .video-icon:hover,
+    .video-icon:active {
+      transform: scale(1.15) translateY(2px);
+      filter: drop-shadow(0 0 10px var(--sky-600)) brightness(1.2);
+      animation: none;
+    }
+    
+    .video-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 14px;
+      cursor: pointer;
+      /* Mobile-optimierte Touch-Fläche */
+      min-width: 60px;
+      min-height: 60px;
+      padding: 11px;
+      transition: all 0.3s ease;
+    }
+    
+    .video-link:hover,
+    .video-link:active {
+      transform: scale(1.05);
+    }
+    
+    /* Zusätzliche Betonung auf mobilen Geräten */
+    @media (max-width: 768px) {
+      .video-link {
+        min-width: 70px;
+        min-height: 70px;
+        padding: 15px;
+      }
+      
+      .video-icon {
+        width: 52px;
+        height: 52px;
+      }
+      
+      /* Pulse-Animation auf Mobile verstärkt - größeres Flimmern */
+      @keyframes pulse-glow {
+        0%, 100% {
+          filter: drop-shadow(0 0 4px rgba(14, 165, 233, 0.5));
+          transform: translateY(0) scale(0.95);
+        }
+        50% {
+          filter: drop-shadow(0 0 14px rgba(14, 165, 233, 0.9));
+          transform: translateY(0) scale(1.12);
+        }
+      }
+    }
+  </style>
+  <h2 style="display: flex; align-items: center;">
+    Videosprechstunde
+    <a href="https://www.doctolib.de/allgemeinmedizin/bornheim/tristan-wetzel" target="_blank" class="video-link" aria-label="Zur Videosprechstunde">
+      <img src="images/kamera.png" alt="Videosprechstunde Symbol" class="video-icon">
+    </a>
+  </h2>
+  <p>Manchmal ist der Weg in die Praxis beschwerlich oder nicht notwendig. Nutzen Sie unsere Online-Videosprechstunde für eine schnelle und unkomplizierte Beratung.</p>
+  <h3>Wann ist eine Videosprechstunde sinnvoll?</h3>
+  <ul>
+    <li>Nachbesprechung von Befunden und Laborwerten</li>
+    <li>Beratung zu leichten Beschwerden</li>
+    <li>Allgemeine medizinische Fragen</li>
+  </ul>
+  <h3>So funktioniert's:</h3>
+  <ul>
+    <li>Termin über Doctolib buchen</li>
+    <li>Sie erhalten einen Link zur Videosprechstunde</li>
+    <li>Zum vereinbarten Zeitpunkt einloggen</li>
+    <li>Bequem von zu Hause aus mit Ihrem Arzt sprechen</li>
+  </ul>
+  <p><strong>Wichtig:</strong> Bei akuten Notfällen oder wenn eine körperliche Untersuchung erforderlich ist, kommen Sie bitte persönlich in die Praxis.</p>
+  <p class="video-button-wrapper">
+    <a href="https://www.doctolib.de/allgemeinmedizin/bornheim/tristan-wetzel" target="_blank" class="video-button">
+      Jetzt Videosprechstunde buchen
+    </a>
+  </p>
+  <style>
+    .video-button-wrapper {
+      margin-top: 20px;
+    }
+    .video-button {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--sky-600);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.25s ease, transform 0.2s ease;
+    }
+    .video-button:hover,
+    .video-button:focus {
+      background-color: #0ea5e9;
+      transform: scale(1.05);
+    }
+  </style>
+</section>
+
+ </section>
+  <!-- Hausbesuche -->
+  <section id="hausbesuche" class="leistung-section">
+    <h2>Hausbesuche</h2>
+    <p>Wenn Sie aus gesundheitlichen Gründen nicht in die Praxis kommen können, besuchen wir Sie gerne zu Hause.</p>
+    <h3>Wann ist ein Hausbesuch möglich?</h3>
+    <ul>
+      <li>Bei akuten schweren Erkrankungen, die einen Praxisbesuch unmöglich machen</li>
+      <li>Bei Bettlägerigkeit oder stark eingeschränkter Mobilität</li>
+      <li>Nach Operationen oder Krankenhausaufenthalten</li>
+      <li>Bei Pflegebedürftigkeit</li>
+      <li>In Alten- und Pflegeheimen</li>
+    </ul>
+    <h3>So vereinbaren Sie einen Hausbesuch:</h3>
+    <ul>
+      <li>Rufen Sie uns möglichst früh am Tag an (bis spätestens 11:00 Uhr)</li>
+      <li>Schildern Sie kurz den Grund für den Hausbesuch</li>
+      <li>Geben Sie Ihre Adresse und Telefonnummer an</li>
+      <li>Halten Sie Ihre Krankenversicherungskarte bereit</li>
+    </ul>
+    <p><strong>Bitte beachten Sie:</strong> Hausbesuche sind grundsätzlich nur bei medizinischer Notwendigkeit möglich. In akuten Notfällen wählen Sie bitte den Notruf 112.</p>
+    <p style="margin-top:20px;"><strong>Telefon:</strong> <a href="tel:+49123456789" style="color:var(--sky-600); font-weight:600; text-decoration:none;">+49 123 456 789</a></p>
+  </section>
+
+</div>
+<div class="container">
+  <footer>
+    <div>© <span id="year"></span> Gemeinschaftspraxis W</div>
+    <div>
+      <a href="privacy.html">Datenschutz</a>
+      <a href="impressum.html">Impressum</a>
+      
+    </div>
+  </footer>
+</div>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// Smooth Scrolling für Anker-Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
+
+ <!-- Script mit Mobile Scroll -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Mobile: Seite nach oben scrollen beim Laden
+    if (window.innerWidth <= 900) {
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          window.scrollTo({
+            top: 550,
+            behavior: 'smooth'
+          });
+        }, 100);
+      });
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

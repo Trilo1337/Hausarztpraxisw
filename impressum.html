@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum – Gemeinschaftspraxis W</title>
+  <style>
+    :root {
+      --sky-50: #f0f9ff;
+      --sky-100: #e6f6ff;
+      --sky-600: #0284c7;
+      --text: #0f172a;
+      --muted: #475569;
+      --card: #ffffff;
+      --radius: 14px;
+      --container: 1100px;
+    }
+    body {
+      font-family: Inter, sans-serif;
+      margin: 0;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--sky-50), #ffffff);
+    }
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 24px;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    /* Navigation */
+    nav a {
+      text-decoration: none;
+      color: white;
+      background: var(--sky-600);
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #0369a1;
+    }
+    h2 {
+      color: var(--sky-600);
+    }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: 0 6px 22px rgba(2, 132, 199, 0.06);
+      padding: 18px;
+      border: 1px solid #eef6fb;
+      margin-top: 20px;
+    }
+    footer {
+      margin-top: 28px;
+      padding: 18px 0;
+      border-top: 1px solid #eef6fb;
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    footer a {
+      margin-left: 12px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    /* Mobile Optimierung */
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 14px;
+      }
+      nav {
+        order: 3;
+      }
+      nav a {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 12px;
+        font-size: 16px;
+      }
+      main {
+        order: 1;
+      }
+      .brand h1 {
+        font-size: 32px;
+      }
+      .container {
+        padding: 16px;
+      }
+      .card p {
+        font-size: 15px;
+        line-height: 1.6;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <h1>Gemeinschaftspraxis W</h1>
+      </div>
+      <nav>
+        <a href="index.html">Startseite</a>
+      </nav>
+    </header>
+    <main>
+      <h2>Impressum</h2>
+      <div class="card">
+        <p><strong>Gemeinschaftspraxis W</strong><br>Musterstraße 12<br>12345 Musterstadt<br>Deutschland</p>
+        <p>Telefon: +49 123 456 789<br>E-Mail: info@gemeinschaftspraxis-w.example</p>
+        <p>Vertreten durch: Dr. A We & T W</p>
+        <p>Berufsbezeichnung: Fachärztin/Facharzt für Allgemeinmedizin<br>Zuständige Ärztekammer: Ärztekammer Musterstadt<br>Aufsichtsbehörde: Kassenärztliche Vereinigung Musterstadt</p>
+        <p>Inhaltlich Verantwortliche gemäß § 55 Abs. 2 RStV: Dr. A We</p>
+      </div>
+    </main>
+    <footer>
+      <div>© <span id="year"></span> Gemeinschaftspraxis W</div>
+      <div>
+        <a href="privacy.html">Datenschutz</a>
+        <a href="impressum.html">Impressum</a>
+      </div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
