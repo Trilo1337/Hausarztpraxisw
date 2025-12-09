@@ -378,23 +378,7 @@ footer {
   }
 }
 
-/* Schneefall-Animation */
-.snowflake {
-  position: fixed;
-  top: -10px;
-  z-index: 9999;
-  user-select: none;
-  pointer-events: none;
-  color: #fff;
-  font-size: 1em;
-  animation: fall linear infinite;
-}
 
-@keyframes fall {
-  to {
-    transform: translateY(100vh);
-  }
-}
 </style>
 </head>
 <body>
@@ -738,28 +722,7 @@ window.addEventListener('click', e => {
 // Footer Jahr
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Schneefall-Effekt erstellen
-function createSnowflake() {
-  const snowflake = document.createElement('div');
-  snowflake.classList.add('snowflake');
-  snowflake.innerHTML = '❄';
-  snowflake.style.left = Math.random() * 100 + '%';
-  snowflake.style.animationDuration = Math.random() * 3 + 5 + 's'; // 5-8 Sekunden
-  snowflake.style.opacity = Math.random() * 0.6 + 0.4; // 0.4-1.0
-  snowflake.style.fontSize = Math.random() * 30 + 10 + 'px'; // 10-40px
-  
-  document.body.appendChild(snowflake);
-  
-  // Schneeflocke nach Animation entfernen
-  setTimeout(() => {
-    snowflake.remove();
-  }, 8000);
-}
 
-// Unterschiedliche Frequenz für Mobile und Desktop
-const isMobile = window.innerWidth <= 900;
-const snowInterval = isMobile ? 1200 : 300; // Mobile: alle 1.2s, Desktop: alle 0.3s
-setInterval(createSnowflake, snowInterval);
 
 // Weihnachts-Overlay - nur alle 20 Minuten anzeigen
 const weihnachtenOverlay = document.getElementById('overlay-weihnachten');
@@ -885,6 +848,7 @@ if (window.innerWidth <= 900 && window.location.hash) {
 </div>
 </body>
 </html>
+
 
 
 
