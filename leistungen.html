@@ -833,7 +833,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     document.getElementById('year').textContent = new Date().getFullYear();
     
     // Mobile: Seite nach oben scrollen beim Laden
-    if (window.innerWidth <= 900) {
+    if (window.innerWidth <= 900 && !window.location.hash) {
       window.addEventListener('load', function() {
         setTimeout(function() {
           window.scrollTo({
@@ -846,6 +846,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   </script>
 </body>
 </html>
+
 
 
 
