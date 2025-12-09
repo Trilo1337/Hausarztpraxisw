@@ -871,10 +871,21 @@ window.addEventListener('click', e => {
   if (e.target === overlayNotfall) overlayNotfall.style.display = 'none';
 });
 
+// Lösung 3: Verhindere Auto-Scroll auf Mobile bei Hash-Navigation
+if (window.innerWidth <= 900 && window.location.hash) {
+  // Kleine Verzögerung, dann zurück nach oben scrollen
+  setTimeout(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, 1);
+}
+
+</script>
+
 </script>
 </div>
 </body>
 </html>
+
 
 
 
